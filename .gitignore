@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+*.db
+
+# Node/React
+node_modules/
+dist/
+.DS_Store
+# Ignore heavy AI model files
+*.bin
+*.safetensors
+*.pt
+*.h5
+*.model

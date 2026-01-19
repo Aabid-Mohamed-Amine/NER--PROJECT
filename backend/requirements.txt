@@ -1,0 +1,14 @@
+fastapi==0.109.0
+uvicorn==0.27.0
+sqlalchemy==2.0.25
+pymysql==1.1.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+transformers==4.36.2
+torch
+python-dotenv==1.0.0
+google-generativeai  # Remplace google-generativeai (package officiel pour Google Gemini)
+argon2-cffi==21.3.0

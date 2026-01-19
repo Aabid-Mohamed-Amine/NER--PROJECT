@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #121212; /* Brand Black */
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom Scrollbar (Sleek Dark) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Entity Highlights (For NER) */
+.entity-per {
+  @apply bg-purple-900/50 text-purple-200 border border-purple-500/30 px-1 rounded mx-0.5 cursor-pointer hover:bg-purple-800/50 transition-colors;
+}
+.entity-org {
+  @apply bg-blue-900/50 text-blue-200 border border-blue-500/30 px-1 rounded mx-0.5 cursor-pointer hover:bg-blue-800/50 transition-colors;
+}
+.entity-loc {
+  @apply bg-green-900/50 text-green-200 border border-green-500/30 px-1 rounded mx-0.5 cursor-pointer hover:bg-green-800/50 transition-colors;
+}
