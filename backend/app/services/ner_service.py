@@ -30,12 +30,11 @@ class NERService:
         for entity in results:
             processed_results.append({
                 "word": entity["word"],
-                "entity_group": entity["entity_group"], # ORG, PER, LOC
+                "entity_group": entity["entity_group"], 
                 "score": float(entity["score"]),
                 "start": entity["start"],
                 "end": entity["end"]
             })
         return processed_results
 
-# Create a singleton instance
 ner_service = NERService()

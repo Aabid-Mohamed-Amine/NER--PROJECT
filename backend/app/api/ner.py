@@ -18,7 +18,7 @@ class NERRequest(BaseModel):
 class HistoryResponse(BaseModel):
     id: int
     input_text: str
-    ner_result: Any # We will send the JSON object back
+    ner_result: Any 
     timestamp: str
 
     class Config:
@@ -34,7 +34,7 @@ def predict_ner(
     entities = ner_service.predict(request.text)
     
     # 2. Save to Database (The History Table)
-    # We convert the list of entities to a JSON string to store it
+   
     history_item = History(
         user_id=current_user.id,
         input_text=request.text,

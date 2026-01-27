@@ -10,5 +10,5 @@ python-multipart==0.0.6
 transformers==4.36.2
 torch
 python-dotenv==1.0.0
-google-generativeai  # Remplace google-generativeai (package officiel pour Google Gemini)
+google-generativeai  
 argon2-cffi==21.3.0

@@ -1,15 +1,12 @@
-# backend/app/core/security.py
-
 from datetime import datetime, timedelta
 from typing import Optional
 from jose import jwt
 from passlib.context import CryptContext
 import os
 
-# --- CHANGE IS HERE ---
-# We switched from "bcrypt" to "argon2" to fix the version error
+
 PWD_CONTEXT = CryptContext(schemes=["argon2"], deprecated="auto")
-# ----------------------
+
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")

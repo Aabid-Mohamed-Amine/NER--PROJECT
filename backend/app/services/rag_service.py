@@ -7,7 +7,7 @@ load_dotenv()
 
 class RAGService:
     def __init__(self):
-        # ✅ Read API key from environment variable
+   
         self.api_key = os.getenv("GEMINI_API_KEY")
 
         if not self.api_key:
@@ -15,7 +15,7 @@ class RAGService:
 
         genai.configure(api_key=self.api_key)
 
-        # Use Gemini Flash model
+       
         self.model = genai.GenerativeModel("gemini-flash-latest")
 
     def search(self, query: str):

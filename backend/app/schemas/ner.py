@@ -26,4 +26,4 @@ class NERHistoryResponse(BaseModel):
 
 class ChatbotRequest(BaseModel):
     query: str
-    context: str | None = None  # The NER text for context
+    context: str | None = None  

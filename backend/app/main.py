@@ -4,7 +4,7 @@ from app.database import engine, Base
 from app.api import auth, ner
 from app.api import auth, ner, chat
 
-# --- CRITICAL: Import models so SQLAlchemy "sees" them before creating tables ---
+
 from app.models import user, history
 
 # Create Database Tables automatically
@@ -15,7 +15,7 @@ app = FastAPI(title="Arabic NER API")
 # Allow Frontend to talk to Backend (CORS)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"], # React default port
+    allow_origins=["http://localhost:5173"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

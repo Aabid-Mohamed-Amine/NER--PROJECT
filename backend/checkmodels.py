@@ -1,7 +1,17 @@
 import google.generativeai as genai
+from dotenv import load_dotenv
+import os
 
-# --- PASTE YOUR API KEY HERE ---
-api_key = "AIzaSyDJKTPVSgqosG9nb5sSDruM7o76a8gvFrk"
+
+load_dotenv()
+
+
+api_key = os.getenv("GEMINI_API_KEY")
+
+
+if not api_key:
+    print("❌ Erreur: GEMINI_API_KEY non trouvée dans le fichier .env")
+    exit()
 
 genai.configure(api_key=api_key)
 

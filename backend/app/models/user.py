@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import relationship # <--- Add this import
+from sqlalchemy.orm import relationship 
 from app.database import Base
 
 class User(Base):
@@ -10,5 +10,5 @@ class User(Base):
     hashed_password = Column(String(255))
     full_name = Column(String(255))
     
-    # --- ADD THIS LINE ---
+  
     history_items = relationship("History", back_populates="user")

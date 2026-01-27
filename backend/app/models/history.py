@@ -9,7 +9,7 @@ class History(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     input_text = Column(Text, nullable=False)
-    ner_result = Column(Text, nullable=False) # We will store the JSON result as a string
+    ner_result = Column(Text, nullable=False) 
     timestamp = Column(DateTime, default=datetime.utcnow)
 
     user = relationship("User", back_populates="history_items")
